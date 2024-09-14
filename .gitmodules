@@ -1,0 +1,6 @@
+[submodule "task_1"]
+  path = task_1
+  url = <repository-url-for-task_1>
+[submodule "task_2"]
+  path = task_2
+  url = <repository-url-for-task_2>

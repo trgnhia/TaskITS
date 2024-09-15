@@ -1,0 +1,165 @@
+					*------------MẢNG TRONG JAVA-----------*
+I MẢNG 1 CHIỀU
++Về định nghĩa: Đã được biết ở những ngôn ngữ trước
+
++Khai báo mảng trong java: type[] name;
+
+-type là kiểu dữ liệu của mảng, thường gọi tắt là kiểu của mảng hay kiểu mảng. Kiểu của mảng là các kiểu hợp lệ trong ngôn ngữ lập trình Java như các kiểu nguyên thủy: int, float boolean; các kiểu tham chiếu: String, các class, interface… như StringBuilder, StringBuffer, Student, BankAccount, ContentProvider, Comparator, Comparable…
+
+-Sau kiểu của mảng ta dùng cặp ngoặc vuông [] đi liền. Đây là cú pháp để nhận biết một biến kiểu mảng với một biến thông thường. Ta có thể để [] sau tên mảng tuy nhiên khuyến nghị đặt [] ngay sau kiểu của mảng.
+
+ví dụ
+int[] myNumbers; // khai báo biến mảng kiểu int
+float[] avgGrades; // khai báo mảng kiểu float
+String[] brands; // khai báo mảng kiểu String
+
++Khởi tạo mảng: 
+
+-Mảng khai báo như trên chưa sử dụng được do chúng ta chỉ mới khai báo, chưa khởi tạo giá trị cho nó. Mọi mảng trước khi đem sử dụng đều phải được khởi tạo hoặc gán giá trị.
+
+cú pháp khởi tạo mảng:
+type[] name = new type[num_of_elements];
+type[] name = new type[]{elements};
+type[] name ={elements};
+
+-Cách thứ nhất sẽ mặc định tạo ra một mảng kiểu type có num_of_elements phần tử. Tất cả các phần tử này mặc định sẽ là 0 nếu là các kiểu số, false nếu là boolean và null nếu là các kiểu tham chiếu như String, các class, interface khác.
+
+-Cách thứ hai tạo ra một mảng kiểu type có số phần tử xác định qua số lượng phần tử được khởi tạo trong cặp { }.
+
+-Cách thứ ba là rút gọn của cách thứ 2, lúc này số lượng phần tử liệt kê trong cặp ngoặc {} sẽ là số lượng phần tử của mảng.
+
+-Để truy xuất tất cả giá trị trong mảng ta dung vòng for. còn 1 giá trị thì dung cú pháp  name[index] = value;
+-Cú pháp lấy số lượng phần tử hiện có của mảng là: arr.length
+-Nếu muốn copy nội dung từ một mảng sang 1 mảng khác ta dùng Arrays.copyOf(source, new_size);
+
+
+II MẢNG NHIỀU CHIỀU
+-Trong Java, mảng nhiều chiều là một mảng mà mỗi phần tử của nó là một mảng khác. Một trong những loại mảng nhiều chiều phổ biến nhất là mảng hai chiều, nhưng Java hỗ trợ mảng có nhiều hơn hai chiều.
+Cách khai báo mảng hai chiều:int[][] array = new int[3][4]; // Mảng 3 hàng và 4 cột
+
+// Cách 2: Khai báo và khởi tạo mảng 2D với giá trị ban đầu
+int[][] array = {
+    {1, 2, 3, 4},
+    {5, 6, 7, 8},
+    {9, 10, 11, 12}
+};
+
+				*----------STRING-----------*
+
+-Kiểu String dùng để lưu trữ chuỗi các kí tự trong ngôn ngữ lập trình Java. Chuỗi kí tự là tập các kí tự được sắp đặt theo một trật tự nhất định nhằm biểu đạt một ý nghĩa nào đó và đặt trong cặp nháy kép “”.
+
+-Về bản chất nó là một final class.
+
+-Kiểu bất biến là một kiểu mà giá trị của nó kể từ sau khi được gán thì không thể thay đổi.
+
+-Khi tạo biến kiểu String thì đó là biến kiểu đối tượng(object) không phải biến của kiểu nguyên thủy. Do đó ta có thể thực hiện các thao tác gọi phương thức trên đối tượng của kiểu String.
+
+- Các phương thức và ý nghĩa phổ biến khi sử dung kiểu String
+Phương thức
+
+Ý nghĩa sử dụng
+
++length()	Cho biết độ dài của chuỗi tính theo số kí tự. Luôn >= 0
+
++toUpperCase()	Viết hoa toàn bộ chuỗi
+
++toLowerCase()	Viết thường toàn bộ chuỗi
+
++indexOf()	Tìm vị trí đầu tiên của một kí tự/một chuỗi con trong chuỗi kí tự
+
++lastIndexOf()	Tìm vị trí cuối cùng của một kí tự/chuỗi con trong chuỗi gốc
+
++charAt(index)	Lấy ra kí tự tại vị trí index. Giá trị index phải >= 0 và < length() của chuỗi đang xét
+
++compareTo(other)	So sánh sự tương đương có phân biệt chữ hoa, chữ thường về mặt giá trị của hai chuỗi. Kết quả trả về giá trị số âm, 0 hoặc dương tùy vào mức độ tương quan của hai chuỗi.
+
++compareToIgnoreCase(other)	So sánh hai chuỗi về mặt giá trị. Không phân biệt chữ hoa chữ thường. Kết quả trả về giá trị âm nếu chuỗi hiện thời đứng trước other. Bằng 0 nếu hai chuỗi cùng giá trị. Dương nếu chuỗi hiện thời đứng sau chuỗi other.
+
++trim()	Loại bỏ kí tự khoảng trắng ở đầu và cuối chuỗi. Khoảng trắng là các kí tự dấu cách, dấu tab, xuống dòng.
+
++replace(old, newStr)	Thay thế kí chuỗi kí tự old bằng kí tự/chuỗi kí tự newStr. Thực hiện thay thế toàn bộ chuỗi old bằng newStr xuất hiện trong chuỗi.
+
++replaceAll(regex, newStr)	Thay thế tất cả các chuỗi con thỏa mãn regex trong chuỗi gốc bằng newStr.
+
++split(regex)	Tách chuỗi và trả về mảng String sau khi tách. regex là mẫu kí tự so khớp cần để xác định điều kiện tách chuỗi. Ví dụ regex =”\\s+” chỉ định tách chuỗi tại vị trí có 1 hoặc nhiều dấu cách. Chi tiết về regex và các quy tắc so khớp bạn tìm hiểu trong chương Regular Expression
+.
++substring(startIndex)	Trích xuất chuỗi con của chuỗi gốc từ vị trí startIndex đến hết chuỗi gốc.
+
++substring(start, end)	Trích xuất chuỗi con của chuỗi gốc từ vị trí start đến trước vị trí end.
+
++isEmpty()	Kiểm tra xem chuỗi hiện thời có rỗng hay không. Kết quả nhận được là true nếu độ dài chuỗi bằng 0 và ngược lại kết quả là false.
+
++isBlank()	Kiểm tra xem chuỗi hiện thời có rỗng hoặc chỉ chứa các kí tự khoảng trắng hay không. Kí tự khoảng trắng là các kí tự như dấu cách, dấu tab, xuống dòng. Như vậy một chuỗi là blank chưa chắc empty.
+			*-----------------STRING BUILDER, BUFFER----------------*
+- Lớp StringBuilder được thiết kế để sử dụng trong trường hợp đơn luồng. Khi có thể, ta nên sử dụng lớp này thay vì StringBuffer vì tốc độ của StringBuilder sẽ nhanh hơn trong hầu hết các triển khai.
+
+-Các phương thức chính của StringBuilder xoay quanh việc chèn thêm phần tử và nối phần tử vào cuối. Các phương thức tương ứng của chúng là insert() và append() được nạp chồng để có thể hoạt động với bất kì kiểu dữ liệu nào.
+
+-Cả hai phương thức trên đều chuyển đổi một cách hiệu quả dữ liệu được cung cấp sang string sau đó chèn hoặc thêm vào nội tại của đối tượng StringBuilder.
+
+-Mỗi StringBuilder có một khả năng chứa(capacity) nhất định. Chừng nào các kí tự chứa trong StringBuilder chưa vượt quá giới hạn này thì giá trị capacity chưa cần cấp phát để mở rộng.
+
+-Nếu bộ đệm nội tại bị tràn, nó sẽ tự động được nới ra với kích thước lớn hơn.
+Khuyến nghị chỉ sử dụng StringBuilder trong trường hợp xử lý đơn luồng, với trường hợp đa luồng ta sử dụng StringBuffer.
+
+-Sử dụng StringBuilder khi ta muốn sửa đổi chuỗi kí tự: thêm, sửa xóa nội dung của chuỗi kí tự. Khi thực hiện, các thao tác này diễn ra trên cùng đối tượng StringBuilder.
+
+CÁC PHƯƠNG THỨC THƯỜNG GẶP VỚI STRINGBUILDER	
+
+Đầu tiên là các phương thức khởi tạo: dùng để tạo đối tượng StringBuilder với các thông số khác nhau:
++StringBuilder(): tạo lập một đối tượng StringBuilder mới không chứa bất kì kí tự nào trong nội tại của nó. Mặc định phương thức này tạo một bộ đệm với kích thước 16 kí tự.
+
++StringBuilder(CharSequence seq): tạo đối tượng StringBuilder với bộ đệm chứa các kí tự như trong tham số kiểu CharSequence truyền vào.
+
++StringBuilder(int capacity): tạo đối tượng StringBuilder rỗng với khả năng chứa capacity kí tự.
+
++StringBuilder(String str): tạo một đối tượng StringBuilder với bộ đệm nội tại chứa nội dung của string cho trước.
+Sau đây là các phương thức thường gặp và mô tả:
+
++StringBuilder append(type param): nối nội dung string đại diện cho giá trị chứa trong param vào cuối bộ đệm chứa các kí tự của đối tượng StringBuilder hiện thời. Trong đó type có thể là các kiểu nguyên thủy, các lớp bao của kiểu nguyên thủy, mảng char[], CharSequence, Object, String, StringBuffer.
+
++StringBuilder append(char[] str, int offset, int len): thêm string đại diện của một mảng con của mảng str vào bộ đệm nội tại của đối tượng StringBuilder. Chuỗi con gồm len kí tự lấy trong str tính từ vị trí offset. Kích thước bộ đệm nội tại trong StringBuilder sẽ tăng lên một lượng bằng len.
+
++StringBuilder append(CharSequence s, int start, int end): nối một chuỗi con của s tính từ vị trí start đến trước end vào bộ đệm nội tại của đối tượng StringBuilder. Kích thước bộ đệm của StringBuilder tăng lên một lượng bằng end – start.
+
++int capacity(): trả về khả năng chứa hiện tại của đối tượng StringBuilder.
+
++char charAt(int index): trả về kí tự tại vị trí index trong bộ đệm nội tại của StringBuilder
+.
++StringBuilder delete(int start, int end): xóa các kí tự từ vị trí start đến trước vị trí end trong bộ đệm nội tại của StringBuilder.
+
++StringBuilder deleteCharAt(int index): xóa kí tự tại vị trí chỉ định trong bộ đệm của StringBuilder.
+
++int indexOf(String str): trả về vị trí kí tự đầu tiên của chuỗi con đầu tiên trong StringBuilder có giá trị trùng với giá trị cho trong tham số str. Tức là vị trí của chuỗi con đầu tiên trong nội tại StringBuilder trùng với str. Không tìm thấy thì return -1.
+
++int indexOf(String str, int fromIndex): trả về vị trí kí tự đầu tiên của chuỗi con đầu tiên trong StringBuilder tính từ vị trí fromIndex có giá trị trùng với giá trị cho trong tham số str. Tức là vị trí của chuỗi con đầu tiên trong nội tại StringBuilder trùng với str. Không tìm thấy return -1.
+
++StringBuilder insert(int offset, type param): chèn nội dung trong tham số param vào nội tại StringBuilder tại vị trí offset. type có thể là bất kì kiểu dữ liệu nào trong số các kiểu nguyên thủy, các lớp bao của kiểu nguyên thủy, mảng char[], CharSequence, Object, String, StringBuffer.
+
++StringBuilder insert(int offset, char[] str, int offset, int len): chèn len kí tự từ vị trí offset trong str vào bộ đệm nội tại của đối tượng StringBuilder.
+
++StringBuilder insert(int offset, CharSequence seq, int start, int end): chèn các kí tự từ vị trí start đến trước end trong seq vào bộ đệm nội tại của đối tượng StringBuilder.
+
++int lastIndexOf(String str): trả về vị trí của kí tự đầu tiên của chuỗi con cuối cùng trong nội tại StringBuilder có giá trị trùng với giá trị tham số str. Nếu không tìm thấy return -1.
+
++int lastIndexOf(String str, int fromIndex): trả về vị trí của kí tự đầu tiên của chuỗi con cuối cùng trong nội tại StringBuilder tính từ vị trí fromIndex có giá trị trùng với giá trị tham số str. Nếu không tìm thấy return -1.
+
++int length(): trả về số lượng kí tự của bộ đệm nội tại trong đối tượng StringBuilder. Giá trị luôn >= 0.
++StringBuilder replace(int start, int end, String str): thay thế các kí tự từ vị trí start đến trước end bằng nội dung trong str.
+
+StringBuilder reverse(): đảo ngược nội dung các kí tự trong bộ đệm nội tại của StringBuilder.
+
+void setCharAt(int index, char ch): cập nhật giá trị kí tự tại vị trí index thành kí tự cho trong tham số ch.
+
+void setLength(int newLength): thiết lập độ dài mới cho các kí tự trong bộ đệm nội tại của đối tượng StringBuilder. newLength phải đảm bảo >= 0.
+
+CharSequence subSequence(int start, int end): trả về một chuỗi kí tự trích ra từ vị trí start đến trước end trong bộ đệm nội tại của StringBuilder.
+
+String subString(int start): trả về chuỗi con trong bộ đệm của StringBuilder từ vị trí start đến hết bộ đệm của đối tượng StringBuilder.
+
+String subString(int start, int end): trả về chuỗi con của các kí tự trong bộ đệm của StringBuilder từ vị trí start đến trước vị trí end.
+
+String toString(): trả về một đối tượng String đại diện cho nội dung các kí tự lưu trong bộ đệm của StringBuilder.
+
+void trimToSize(): giảm khả năng chứa kí tự của StringBuilder xuống. Cách thức hoạt động: nếu khả năng chứa  > số kí tự thực tế hiện có, nó tự động cắt giảm capacity cho phù hợp.
+

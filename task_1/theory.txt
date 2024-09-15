@@ -1,0 +1,30 @@
+
+		*------------------------*KIỂU DỮ LIỆU*----------------------------*
+-Java là một ngôn ngữ mạnh về kiểu, mọi thành phần đều có một kiểu cụ thể.
+-Mỗi kiểu có kích thước khác nhau -> sức chứa khác nhau, chứa được các loại dữ liệu khác nhau.
+-Kiểu dữ liệu trong Java chia làm hai nhóm chính:
+	+ Kiểu nguyên thủy gồm có: char, byte, short, int, long, Boolean, double, float
+		- Mỗi kiểu nguyên thủy này sẽ có một lớp bao tương ứng giúp chuyển đổi giá trị nguyên thủy 		sang đối tượng khi cần thực hiện những thao tác lq đến đối tượng là:
+		char	Character
+		byte	Byte
+		short	Short
+		int	Integer
+		long	Long
+		float	Float
+		double	Double
+		boolean	Boolean
+-Sử dụng kiểu char để lưu trữ một kí tự đơn.
+-Sử dụng kiểu float và double để lưu trữ số thực.
+-Kiểu float có độ chính xác đến 6 hoặc 7 con số sau phần lẻ thập phân.
+-Nếu muốn độ chính xác gấp đôi, lên 14-15 chữ số phần lẻ thập phân ta sử dụng kiểu double.
+-Các giá trị kiểu float có thêm hậu tố f ở cuối. Ví dụ 3.14f là giá trị kiểu float.
+-Các giá trị kiểu double không có hậu tố hoặc sử dụng hậu tố d. Ví dụ 3.14 hoặc 3.14d là giá trị của kiểu số thực.
+-Khi không đòi hỏi độ chính xác lớn hơn 6 chữ số, sử dụng kiểu float. Nếu cần độ chính xác cao ta sử dụng -kiểu double.Ngoài ra float và double có thêm các giá trị NaN, NEGATIVE_INFINITY, POSITIVE_INFINITY.
+
+-Cách khai báo biến trong java: kiểu(type) tên_biến = giá_trị; or var tên_biến = giá_trị 
+L-ưu ý với var: biến phải được cấp giá trị tại thời điểm gọi ra nếu 0 sẽ lỗi
+
+		*---------------*FINAL*---------------*
+-final là một từ khóa mặc định để tạo 1 biến làm hằng số. Các biến là hằng số không thể thay đổi kể từ sau khi được gán giá trị
+Cú pháp tổng quát: final kiểu TÊN_HẰNG_SỐ = giá_trị; Ex: final pi = 3,14; final season = "String"
+

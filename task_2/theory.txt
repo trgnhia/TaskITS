@@ -1,0 +1,42 @@
++Về if-else: không có gì khác biệt so với những ngôn ngữ đã từng học nên phần này em bỏ qua
+
+		*----------*SWITCH CASE*----------*
+-Sử dụng cấu trúc switch khi một biểu thức nào đó có nhiều hơn 2 trường hợp cần đánh giá. Các biểu thức của cấu trúc này thường là các hằng số, các kiểu nguyên hoặc String.
+Với phiên bản java hiện tại thì sẽ có 2 kiểu switch
++ switch statement (switch cổ điển) 
+
+-Bên trong ngoặc tròn là biểu thức có tính chất nguyên, ví dụ biến kiểu nguyên(byte, short, char,int) hoặc lớp bao của chúng, hằng số, enum, String…
+-không dùng kiểu long hoặc Long
+-Phần thân switch ở phía trong cặp ngoặc { }.
+-Mỗi case tương đương với 1 vế if.
+-Nội dung cần thực hiện của mỗi case sẽ viết sau dấu hai chấm :
+-Kết thúc mỗi case là từ khóa break. Nhiệm vụ của break là thoát khỏi cấu trúc switch khi thực hiện xong nhiệm vụ. Nếu quên break, các case liền dưới của case hiện tại sẽ được thực hiện cho dù case đó không thỏa mãn. Việc thực hiện khối switch sẽ chỉ dừng khi gặp break hoặc đến khi kết thúc khối switch.
+Tại mỗi thời điểm thường thì chỉ có một case của switch được thực hiện.
+Nếu sau khi tất cả các case được đánh giá mà không có case nào được thực hiện, khối default sẽ được thực hiện. Kết thúc khối default không cần có break nhưng có thể thêm vào. default luôn ở sau cùng cấu trúc switch.
+
++ switch expression
+-Về cơ bản thì biểu thức switch giống với câu lệnh switch truyền thống tuy nhiên có một số khác biệt như sau:
+-Ta có thể trả về giá trị từ biểu thức switch còn câu lệnh switch thì KHÔNG.
+-Với các câu lệnh đơn ta viết các lệnh cần thực thi của mỗi case sau dấu mũi tên -> thay vì dấu hai chấm.
+-Với các câu lệnh phức tạp, ta để đoạn code cần thực thi trong khối lệnh bao bởi ngoặc { } sau mũi tên.
+-Để trả về giá trị từ các case trong biểu thức switch ta sử dụng keyword yield.
+-Ta không cần sử dụng break để kết thúc mỗi case của biểu thức switch.
+-Ta có thể đánh giá nhiều giá trị trong mỗi case với biểu thức switch.
+-Nếu giá trị đánh giá là enum, ta không cần tới nhãn default trong biểu thức switch.
+-Nếu giá trị đánh giá không phải enum, ta phải cung cấp nhãn default trong biểu thức switch.
+
+
+	*----------FOR, FOREACH---------*
+While, do-While, For và for long nhau: Khá quen thuộc nên em xin phép bỏ qua
+Duyệt foreach: 
+	+Khi sử dụng vòng lặp for, ta có thể gặp vấn đề đó là chỉ số phần tử vượt biên của mảng. Điều này làm chương trình bị crash và kết thúc không mong muốn.
+	+Để giải quyết vấn đề trên, ta sử dụng vòng lặp foreach.\
+Cú pháp:  for (type element : collection) {
+    // do something
+}
+-type là kiểu của biến, cùng kiểu với kiểu mảng cần duyệt, có thể sử dụng var.
+-element là tên biến nào đó ngắn gọn dùng để đại diện cho từng phần tử của mảng.
+-Có dấu hai chấm phân tách ở giữa element và collection.
+-Phần collection là tên một tập hợp nào đó như tên mảng chẳng hạn.
+-Trong phần thân của foreach là các câu lệnh cần thực hiện nào đó.
+-Ta sử dụng foreach khi duyệt mảng là chủ yếu. Còn nếu muốn thao tác sâu hơn như thay đổi giá trị phần tử, duyệt một đoạn thay vì toàn bộ mảng,… ta dùng vòng for thường.
